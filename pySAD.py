@@ -296,6 +296,7 @@ class Principal(Frame):
 
 	def escribirPDF(self):
 		tipoCurva = ['Arq', 'Log']
+		c = [self.c.get() + ' ', '']
 		self.file_opt = options = {}
 		options['defaultextension'] = '.pdf'
 		options['filetypes'] = [('PDF files', '.pdf'),('all files', '.*')]
