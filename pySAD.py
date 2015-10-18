@@ -217,9 +217,9 @@ class Principal(Frame):
 		ax.set_rmax(max(self.r_disc))
 		ax.grid(True)
 
-		with open('distancias.csv', 'wb') as f:
-			writer = csv.writer(f)
-			writer.writerows(izip(self.theta_disc, l_vec))
+		#with open('distancias.csv', 'wb') as f:
+		#	writer = csv.writer(f)
+		#	writer.writerows(izip(self.theta_disc, l_vec))
 
 
 	def regraficar(self):
@@ -271,7 +271,7 @@ class Principal(Frame):
 		x_ant, y_ant = self.pol2cart(r_final[0], theta_final[0])
 
 		tipoCurvaExt = ['Archimedean', 'Logarithmic']
-		fich.write('CM Created with PySAD4NEC\n')
+		fich.write('CM Created with PySAD\n')
 		fich.write('CM L = %#.1f\n' % float(self.lMax.get()))
 		fich.write('CM ' + tipoCurvaExt[int(self.tipoCurva.get())-1] + ' spiral')
 		fich.write('CM a = ' + self.a.get())
@@ -388,7 +388,7 @@ class Principal(Frame):
 
 		self.initText()
 
-		self.parent.title("PySAD4NEC")
+		self.parent.title("PySAD")
 		self.style = Style()
 		self.style.theme_use("clam")
 
