@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
+# Created by Alberto Martínez Alba.
+# Shared under GNU GPL v2
+# 2015
+
 import matplotlib
 matplotlib.use('TkAgg')
 
@@ -157,6 +161,8 @@ class Principal(Frame):
 				# 		theta  =  |-------|   
 				# 		          \   b   /   
 
+				# In order to get an approximately equally spaced segments, new theta values are computed according to the next formula. This formula has been worked
+				# out gradually, not basing on any well-known expression.
 				# 		                          /0.5 * lseg  -  a\ c                   
 				# 		                          |----------------|    -  lseg          
 				# 		                          \        b       /                     
